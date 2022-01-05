@@ -1,0 +1,278 @@
+inp w                           ; 1 <= w <= 9
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12                        ; x = 12
+eql x w                         ; x = 0           (because x >= 12)
+eql x 0                         ; x = 1
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y                         ; z = 0
+mul y 0
+add y w
+add y 7
+mul y x                         ; y = w + 7       (because x = 1)
+add z y                         ; z = w + 7
+
+
+inp w                           ; 1 <= w <= 9
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12                        ; x = z % 26 + 12
+eql x w                         ; x = 0            (because x >= 12)
+eql x 0                         ; x = 1
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y                         ; z *= 26
+mul y 0
+add y w
+add y 8
+mul y x                         ; y = w + 8
+add z y                         ; z += (w + 8)
+
+
+inp w                           ; 1 <= w <= 9
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 13                        ; x = z % 26 + 13
+eql x w                         ; x = 0           (because x >= 13)
+eql x 0                         ; x = 1
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y                         ; z *= 26
+mul y 0
+add y w
+add y 2
+mul y x                         ; y = w + 2
+add z y                         ; z += (w + 2)
+
+
+inp w                           ; 1 <= w <= 9
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12                        ; x = z % 26 + 12
+eql x w                         ; x = 0           (because x >= 12)
+eql x 0                         ; x = 1
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y                         ; z *= 26
+mul y 0
+add y w
+add y 11
+mul y x                         ; y = w + 11
+add z y                         ; z += (w + 11)
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -3
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 12
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 14
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -16
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 13
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 15
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -8
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -12
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -7
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -6
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 8
+mul y x
+add z y
+
+
+inp w                           ; 1 <= w <= 9
+mul x 0
+add x z
+mod x 26                        ; x = z % 26
+div z 26                        ; z //= 26
+add x -11                       ; -11 <= x <= 14
+eql x w                         ; x in [0, 1]
+eql x 0                         ; x in [0, 1]
+mul y 0
+add y 2
+mul y x
+add y 1                         ; y in [1, 26]
+mul z y                         ; z in [z, z * 26]
+mul y 0
+add y w
+add y 5
+mul y x                         ; y in [0, w + 5]
+add z y                         ; z in [z, z + w + 5]
